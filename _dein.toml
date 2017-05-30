@@ -1,0 +1,70 @@
+[[plugins]]
+repo = 'tomasr/molokai'
+hook_add = '''
+  set background=dark
+  au MyAutoCmd VimEnter * nested colorscheme molokai
+'''
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+depends = 'context_filetype.vim'
+if = "has('lua')"
+on_i = 1
+hook_source = '''
+source ~/.config/nvim/plugins/neocomplete.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = 'context_filetype.vim'
+if = "has('nvim')"
+on_i = 1
+
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+depends = 'deoplete.nvim'
+if =  "has('nvim')"
+on_ft = ['ruby']
+on_i = 1
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'                                               
+depends = 'deoplete.nvim'                                                       
+if =  "has('nvim')"
+on_ft = ['python']
+on_i = 1 
+
+[[plugins]]
+repo = 'kassio/neoterm'
+if = "has('nvim')"
+
+[[plugins]]
+repo = 'Shougo/vimshell'
+if = "!has('nvim')"
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+if = "!has('nvim')"
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+if = "!has('nvim')"
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+if = "!has('nvim')"
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
