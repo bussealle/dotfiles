@@ -29,3 +29,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Customize to your needs...
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+# for auto bundle exec
+[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+#for yarn
+export PATH="$PATH:/opt/yarn-[version]/bin"

@@ -18,15 +18,21 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 set backspace=indent,eol,start
-"search"
 set incsearch
 set hlsearch
 set ignorecase
-"number of row and column"
 set ruler
+set cursorline
+set mouse=a
 
 set splitbelow
 set splitright
+
+set laststatus=2
+
+"off beep sound
+set visualbell t_vb=
+set noerrorbells
 
 
 "dein Scripts-----------------------------
@@ -76,4 +82,21 @@ endif
 
 "End dein Scripts-------------------------
 
+"lightline.vim
+let g:lightline = {
+      \ 'colorscheme': 'molokai'
+      \ }
 
+"shortcut key ---------------------------s
+nnoremap <ESC><ESC> :nohlsearch<CR>
+inoremap <silent> jj <ESC>
+"nerdtree.vim
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+"quickrun.vim
+nnoremap <silent><C-r> :QuickRun<CR>
+
+let s:ruby_libdir = system("ruby -rrbconfig -e 'print Config::CONFIG[\"libdir\"]'")
+  let s:ruby_libruby = s:ruby_libdir . '/libruby.dylib'
+  if filereadable(s:ruby_libruby)
+    let $RUBY_DLL = s:ruby_libruby
+  endif
