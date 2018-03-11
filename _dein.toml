@@ -71,3 +71,6 @@ repo = 'thinca/vim-quickrun'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+
+[[pligins]]
+repo = 'kana/vim-submode'

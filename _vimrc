@@ -90,8 +90,19 @@ let g:lightline = {
 "shortcut key ---------------------------s
 nnoremap <ESC><ESC> :nohlsearch<CR>
 inoremap <silent> jj <ESC>
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sn gt
+nnoremap sp gT
+nnoremap st :<C-u>tabnew<CR>
 "nerdtree.vim
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap [nerdtree]    <Nop>
+nmap     <Space>n [nerdtree]
+nnoremap <silent>[nerdtree]n :NERDTreeToggle<CR>
+nnoremap <silent>[nerdtree]f :NERDTreeFind<CR>
 "quickrun.vim
 nnoremap <silent><C-r> :QuickRun<CR>
 
@@ -100,3 +111,6 @@ let s:ruby_libdir = system("ruby -rrbconfig -e 'print Config::CONFIG[\"libdir\"]
   if filereadable(s:ruby_libruby)
     let $RUBY_DLL = s:ruby_libruby
   endif
+
+"IndentLine"
+let g:indentLine_enabled = 1
